@@ -1,0 +1,68 @@
+package oop_tien;
+
+public abstract class ShopItem implements Iship, Comparable<ShopItem> { // comparable để dungg collection.sort
+	// dùng để sắp xếp 1 cái gì đó
+	int id;
+	int iQtt;
+	String iName;
+	double iPrice;
+
+	public ShopItem() {
+		super();
+	}
+
+	public ShopItem(int id, int iQtt, String iName, double iPrice) {
+		super();
+		this.id = id;
+		this.iQtt = iQtt;
+		this.iName = iName;
+		this.iPrice = iPrice;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getiQtt() {
+		return iQtt;
+	}
+
+	public void setiQtt(int iQtt) {
+		this.iQtt = iQtt;
+	}
+
+	public String getiName() {
+		return iName;
+	}
+
+	public void setiName(String iName) {
+		this.iName = iName;
+	}
+
+	public double getiPrice() {
+		return iPrice;
+	}
+
+	public void setiPrice(double iPrice) {
+		this.iPrice = iPrice;
+	}
+
+	@Override
+	public String toString() {
+		return "ShopItem [id=" + id + ", iQtt=" + iQtt + ", iName=" + iName + ", iPrice=" + iPrice + "]";
+	}
+
+	@Override
+	public int compareTo(ShopItem o) {
+		return o.id - this.id;
+	}
+
+	public abstract void TransportingFee();
+
+	protected abstract Object clone();
+
+}

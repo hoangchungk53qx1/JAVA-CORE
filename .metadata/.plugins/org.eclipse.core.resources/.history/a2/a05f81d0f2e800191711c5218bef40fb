@@ -1,0 +1,19 @@
+
+public class leastSignificantBit_solve {
+	static int leastSignificantBit(int n) {
+
+		  int ans = 1;
+		  while ((n & 1) == 0) {
+		    n >>= 1;
+		    ans <<= 1;
+		  }
+
+		  return ans;
+		}
+
+	public static void main(String[] args) {
+		int x= leastSignificantBit(523);
+		System.out.println("bit: " +" " + x);
+	}
+
+}

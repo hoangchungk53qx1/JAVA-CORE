@@ -1,0 +1,26 @@
+
+public class Alphabetic_ver2 {
+	static String alphabeticShift(String inputString) {
+		// int =0;
+		char[] arrchar = new char[inputString.length() + 1];
+		for (int i = 0; i < inputString.length(); i++) {
+			int ascii = (int) inputString.charAt(i);
+			if (ascii == 122) {
+				arrchar[i] = (char) 97;
+			} else {
+				arrchar[i] = (char) (ascii + 1);
+			}
+			System.out.println(arrchar[i]);
+		}
+		String res = new String(arrchar);
+		return res;
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		alphabeticShift("crazy");
+
+	}
+
+}
